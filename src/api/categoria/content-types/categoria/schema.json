@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "categorias",
+  "info": {
+    "singularName": "categoria",
+    "pluralName": "categorias",
+    "displayName": "Categoria"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Categoria": {
+      "type": "enumeration",
+      "enum": [
+        "informatica",
+        "games",
+        "utilitarios",
+        "outros"
+      ],
+      "required": true
+    },
+    "produto": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::produto.produto",
+      "mappedBy": "categoria"
+    }
+  }
+}
